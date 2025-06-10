@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "6315aec9-4ad1-43ad-99c6-3c842da1b8e1",
+		"name": "api-employees-evaluacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24060931"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "F3434-F5T5T5-3D3W6-H777G54",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employees\": [\r\n        {\r\n            \"firstName\": \"wqeewr\",\r\n            \"secondName\": \"\",\r\n            \"paternalLastName\": \"wqdqw\",\r\n            \"maternalSurname\": \"Smith\",\r\n            \"age\": 20,\r\n            \"gender\": \"Male\",\r\n            \"birthdate\": \"1993-05-15\",\r\n            \"position\": \"Developer\"\r\n        },\r\n        \r\n        {\r\n            \"firstName\": \"John2\",\r\n            \"secondName\": \"Michael\",\r\n            \"paternalLastName\": \"Doe\",\r\n            \"maternalSurname\": \"Smith\",\r\n            \"age\": 30,\r\n            \"gender\": \"Male\",\r\n            \"birthdate\": \"1993-05-15\",\r\n            \"position\": \"Developer\"\r\n        },\r\n        {\r\n            \"firstName\": \"juan\",\r\n            \"secondName\": \"Michael\",\r\n            \"paternalLastName\": \"Doe\",\r\n            \"maternalSurname\": \"Smith\",\r\n            \"age\": 30,\r\n            \"gender\": \"Male\",\r\n            \"birthdate\": \"1993-05-15\",\r\n            \"position\": \"Developer\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlEmployees}}/employee/save",
+					"host": [
+						"{{urlEmployees}}"
+					],
+					"path": [
+						"employee",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "4543f-4fFGF45-5G6Y65-E3FF5F5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlEmployees}}/employee",
+					"host": [
+						"{{urlEmployees}}"
+					],
+					"path": [
+						"employee"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/employee' \\\r\n  -H 'accept: application/json'"
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "66F4T66-6RF4T-7UU744-F434R",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlEmployees}}/employee/1",
+					"host": [
+						"{{urlEmployees}}"
+					],
+					"path": [
+						"employee",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/employee' \\\r\n  -H 'accept: application/json'"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "98775E-434F56-11SR78Y-899GD342",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlEmployees}}/employee/delete/1",
+					"host": [
+						"{{urlEmployees}}"
+					],
+					"path": [
+						"employee",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "89HY4-12D2E-F5M7U7-8J65RFD",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"firstName\": \"wqeewr\",\r\n            \"secondName\": \"\",\r\n            \"paternalLastName\": \"wqdqw 2\",\r\n            \"maternalSurname\": \"Smith3 \",\r\n            \"age\": 23,\r\n            \"gender\": \"Male 4\",\r\n            \"birthdate\": \"1993-05-18\",\r\n            \"position\": \"Developerr\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"update",
+						"2"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'http://localhost:8080/employee/update/1' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '       {\r\n            \"firstName\": \"wqeewr\",\r\n            \"secondName\": \"\",\r\n            \"paternalLastName\": \"wqdqw\",\r\n            \"maternalSurname\": \"Smith\",\r\n            \"age\": 20,\r\n            \"gender\": \"Male\",\r\n            \"dateBirth\": \"1993-05-15\",\r\n            \"position\": \"Developer\"\r\n        }'"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlEmployees",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
