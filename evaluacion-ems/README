@@ -20,7 +20,7 @@ Este proyecto es una **API RESTful** que permite realizar operaciones **CRUD** (
 ## 🛠️ Tecnologías utilizadas
 
 - Java 17
-- Spring Boot 3.4.2
+- Spring Boot 3.4.6
 - Spring Data JPA
 - Lombok
 - Swagger (springdoc-openapi)
